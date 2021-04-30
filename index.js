@@ -21,7 +21,7 @@ app.post('/test', (req, res) => {
 
 app.post('/refresh', async (req, res) => {
 	console.log("repl.deploy" + JSON.stringify(req.body) + req.get("Signature"))
-	console.log(JSON.status(req.body))
+	console.log(JSON.stringify(req.body))
 
 	process.stdin.on('data', (data) => {
 		let body = JSON.parse(data)
