@@ -15,8 +15,7 @@ app.use(express.json())
 app.post('/test', (req, res) => {
 	res.status(201)
 	res.set("Access-Control-Allow-Origin", req.query.name)
-  res.json(json)
-	console.log(req.query.name)
+	res.json(json)
 });
 
 app.get('/', (req, res) => {
