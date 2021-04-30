@@ -20,7 +20,7 @@ app.post('/test', (req, res) => {
 });
 
 app.post('/refresh', async (req, res) => {
-	console.log("repl.deploy" + req.body + req.headers.get("Signature"))
+	console.log("repl.deploy" + req.body + req.get("Signature"))
 })
 
 app.get('/', (req, res) => {
