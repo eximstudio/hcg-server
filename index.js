@@ -19,19 +19,8 @@ app.post('/test', (req, res) => {
 	console.log(req.query.name)
 });
 
-app.post('/refresh', async (req, res) => {
-	console.log("repl.deploy" + JSON.stringify(req.body) + req.get("Signature"))
-	console.log(JSON.stringify(req.body))
-
-	process.stdin.on('data', (data) => {
-		let body = JSON.parse(data)
-		res.status(body.status).end(body.body)
-		console.log(body)
-	})
-})
-
 app.get('/', (req, res) => {
-	// res.redirect('https://eximstudio.com')
+	res.redirect('https://eximstudio.com')
 })
 
 app.listen(3000, () => {
