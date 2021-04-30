@@ -14,7 +14,7 @@ app.post('/test', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-	res.redirect('https://eximstudio.com')
+	// res.redirect('https://eximstudio.com')
 })
 
 app.listen(3000, () => {
