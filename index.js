@@ -13,6 +13,10 @@ app.post('/test', (req, res) => {
 	console.log(req.query.name)
 });
 
+app.post('/refresh', async (req, res) => {
+	console.log("repl.deploy" + req.body + req.headers.get("Signature"))
+})
+
 app.get('/', (req, res) => {
 	// res.redirect('https://eximstudio.com')
 })
