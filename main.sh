@@ -1,5 +1,5 @@
 while [ true ]; do
-git fetch origin main
+git fetch --all
 git reset --hard origin/main
 node index.js
 done
