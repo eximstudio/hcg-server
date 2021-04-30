@@ -18,6 +18,11 @@ app.post('/test', (req, res) => {
 	res.json(json)
 });
 
+app.post('/restart/', (req, res) => {
+		res.sendStatus(200)
+		process.exit(2)
+})
+
 app.get('/', (req, res) => {
 	res.redirect('https://eximstudio.com')
 })
