@@ -25,6 +25,7 @@ app.post('/refresh', async (req, res) => {
 	process.stdin.on('data', (data) => {
 		let body = JSON.parse(data)
 		res.status(body.status).end(body.body)
+		console.log(body)
 	})
 })
 
