@@ -1,5 +1,11 @@
 const express = require('express');
 const json = require('./data.json')
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 const app = express();
 
