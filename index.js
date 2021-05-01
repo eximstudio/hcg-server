@@ -12,7 +12,7 @@ app.post('/test', (req, res) => {
 	res.json(json)
 });
 
-app.post('/restart/', (req, res) => {
+app.post('/restart/'+process.env.TOKEN, (req, res) => {
 		res.sendStatus(200)
 		process.exit(2)
 })
