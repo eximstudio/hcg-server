@@ -8,7 +8,7 @@ app.use(express.json())
 
 app.post('/test', (req, res) => {
 	res.status(201)
-	res.set("Access-Control-Allow-Origin", req.query.name)
+	res.set("Access-Control-Allow-Origin", req.query.origin)
 	res.json(json)
 });
 
