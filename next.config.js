@@ -2,14 +2,23 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/api',
+        source: "/api",
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: '*',
+            value: "*",
           },
         ],
       },
-    ]
+    ];
   },
-}
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "https://object3d.netlify.app/",
+        permanent: true,
+      },
+    ];
+  },
+};
