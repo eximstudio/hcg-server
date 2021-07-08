@@ -82,6 +82,6 @@ let json = [
 
 module.exports = (req, res) => {
   res.status(201);
-  res.headers.set("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json(json);
 };
