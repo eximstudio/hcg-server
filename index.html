@@ -3,12 +3,22 @@
 
 <head>
     <title>HCG</title>
-    <meta http-equiv="refresh" content="0;URL='https://object3d.netlify.app/'" />
+    <meta http-equiv="refresh" content="5;URL='https://object3d.netlify.app/'" />
 </head>
 
 <body>
-    <p>This page has moved to a <a href="https://object3d.netlify.app/">
-            object3d.netlify.app/</a>.</p>
+    <center>
+        <p>This page has moved to a <a href="https://object3d.netlify.app/">object3d.netlify.app/</a>.<br />Redirecting in <span id="timer">5</span>s</p>
+    </center>
 </body>
+<script>
+    let tm = document.getElementById("timer");
+    let time = 5;
+    const timer = setInterval(function(){
+        time--
+        if (time === 0) clearInterval(timer)
+        tm.innerText = time
+    }, 1000)
 
+</script>
 </html>
