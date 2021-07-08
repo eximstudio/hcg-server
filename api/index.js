@@ -82,6 +82,7 @@ let json = [
 
 module.exports = (req, res) => {
   res.status(201);
-  res.headers.set("Access-Control-Allow-Origin", "*");
+  // res.headers.set("Access-Control-Allow-Origin", "*");
+  console.log(Object.entries(res));
   res.json(json);
 };
